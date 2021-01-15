@@ -1,0 +1,21 @@
+server:
+  port: 5555
+spring:
+  application:
+    name: security-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/role_db
+    username: postgres
+    password: postgres
+    initialization-mode: always
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: none
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
