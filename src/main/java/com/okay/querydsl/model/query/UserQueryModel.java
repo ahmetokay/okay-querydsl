@@ -1,4 +1,4 @@
-package com.okay.querydsl.query;
+package com.okay.querydsl.model.query;
 
 import com.okay.querydsl.core.QueryModel;
 import com.okay.querydsl.enm.EnumUserType;

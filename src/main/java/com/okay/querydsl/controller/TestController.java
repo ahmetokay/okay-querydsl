@@ -1,7 +1,7 @@
 package com.okay.querydsl.controller;
 
 import com.okay.querydsl.entity.User;
-import com.okay.querydsl.query.UserQueryModel;
+import com.okay.querydsl.model.query.UserQueryModel;
 import com.okay.querydsl.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

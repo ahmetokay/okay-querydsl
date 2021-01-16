@@ -1,10 +1,10 @@
 package com.okay.querydsl.service;
 
 import com.okay.querydsl.core.PageModel;
-import com.okay.querydsl.entity.query.QUser;
 import com.okay.querydsl.entity.User;
+import com.okay.querydsl.entity.query.QUser;
+import com.okay.querydsl.model.query.UserQueryModel;
 import com.okay.querydsl.query.UserQueryGenerator;
-import com.okay.querydsl.query.UserQueryModel;
 import com.okay.querydsl.repository.UserRepository;
 import com.querydsl.core.types.Predicate;
 import org.springframework.data.domain.Page;

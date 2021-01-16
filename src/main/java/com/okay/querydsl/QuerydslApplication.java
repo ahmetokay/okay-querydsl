@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.okay.querydsl.core.GenericQueryModel;
 import com.okay.querydsl.core.PageModel;
 import com.okay.querydsl.enm.EnumUserType;
-import com.okay.querydsl.query.UserQueryModel;
+import com.okay.querydsl.model.query.UserQueryModel;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
