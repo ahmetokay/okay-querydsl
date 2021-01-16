@@ -1,7 +1,7 @@
 package com.okay.querydsl.service;
 
 import com.okay.querydsl.core.PageModel;
-import com.okay.querydsl.entity.QUser;
+import com.okay.querydsl.entity.query.QUser;
 import com.okay.querydsl.entity.User;
 import com.okay.querydsl.query.UserQueryGenerator;
 import com.okay.querydsl.query.UserQueryModel;

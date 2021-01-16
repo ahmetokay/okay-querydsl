@@ -1,6 +1,8 @@
-package com.okay.querydsl.entity;
+package com.okay.querydsl.entity.query;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
+import com.okay.querydsl.entity.User;
+
 
 import com.querydsl.core.types.dsl.*;
 
@@ -20,7 +22,7 @@ public class QUser extends EntityPathBase<User> {
 
     public static final QUser user = new QUser("user");
 
-    public final com.okay.querydsl.core.QBaseEntity _super = new com.okay.querydsl.core.QBaseEntity(this);
+    public final com.okay.querydsl.core.query.QBaseEntity _super = new com.okay.querydsl.core.query.QBaseEntity(this);
 
     //inherited
     public final NumberPath<Integer> id = _super.id;
@@ -31,7 +33,7 @@ public class QUser extends EntityPathBase<User> {
 
     public final DateTimePath<java.util.Date> registerDate = createDateTime("registerDate", java.util.Date.class);
 
-    public final ListPath<Role, QRole> roleList = this.<Role, QRole>createList("roleList", Role.class, QRole.class, PathInits.DIRECT2);
+    public final ListPath<com.okay.querydsl.entity.Role, QRole> roleList = this.<com.okay.querydsl.entity.Role, QRole>createList("roleList", com.okay.querydsl.entity.Role.class, QRole.class, PathInits.DIRECT2);
 
     public final StringPath surname = createString("surname");
 

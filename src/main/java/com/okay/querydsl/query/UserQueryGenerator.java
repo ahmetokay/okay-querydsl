@@ -1,8 +1,8 @@
 package com.okay.querydsl.query;
 
 import com.okay.querydsl.enm.EnumUserType;
-import com.okay.querydsl.entity.QUser;
 import com.okay.querydsl.entity.User;
+import com.okay.querydsl.entity.query.QUser;
 import com.querydsl.core.BooleanBuilder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;

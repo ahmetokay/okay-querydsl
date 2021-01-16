@@ -83,10 +83,14 @@
                 <version>1.1.3</version>
                 <executions>
                     <execution>
+
                         <goals>
                             <goal>process</goal>
                         </goals>
                         <configuration>
+                            <options>
+                                <querydsl.packageSuffix>.query</querydsl.packageSuffix>
+                            </options>
                             <outputDirectory>target/generated-sources/java</outputDirectory>
                             <processor>com.querydsl.apt.jpa.JPAAnnotationProcessor</processor>
                         </configuration>
