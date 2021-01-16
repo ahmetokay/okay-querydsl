@@ -1,11 +1,10 @@
 package com.okay.querydsl.service;
 
-import com.okay.querydsl.core.FilterModel;
 import com.okay.querydsl.entity.User;
-
-import java.util.List;
+import com.okay.querydsl.query.UserQueryModel;
+import org.springframework.data.domain.Page;
 
 public interface UserService {
 
-    List<User> filterService(FilterModel userFilterModel);
+    Page<User> filter(UserQueryModel userQueryModel);
 }

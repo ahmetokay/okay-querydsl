@@ -5,9 +5,11 @@ import lombok.Data;
 @Data
 public class SearchCriteria {
 
+    private String type;
+
     private String key;
 
     private String operation;
 
-    private String value;
+    private Object value;
 }
