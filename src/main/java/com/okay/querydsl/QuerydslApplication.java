@@ -30,7 +30,7 @@ public class QuerydslApplication {
         genericQueryModel.setKey("username");
         genericQueryModel.setOperation("like");
         genericQueryModel.setValue("hme");
-        userQueryModel.setCriteriaQueryModelList(List.of(genericQueryModel));
+        userQueryModel.setQueryModelList(List.of(genericQueryModel));
         try {
             String s = new ObjectMapper().writeValueAsString(userQueryModel);
             System.out.println(s);

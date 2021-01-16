@@ -1,5 +1,6 @@
 package com.okay.querydsl.query;
 
+import com.okay.querydsl.core.AbstractQueryGenerator;
 import com.okay.querydsl.enm.EnumUserType;
 import com.okay.querydsl.entity.QUser;
 import com.okay.querydsl.entity.Role;

@@ -2,21 +2,16 @@ package com.okay.querydsl.core;
 
 import lombok.Data;
 
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 @Data
 public class PageModel implements Serializable {
 
-    @NotNull
-    private Integer page;
+    private Integer page = 0;
 
-    @NotNull
-    private Integer size;
+    private Integer size = 10;
 
-    @NotNull
-    private String sortField;
+    private String sortField = "id";
 
-    @NotNull
-    private Integer sortOrder;
+    private Integer sortOrder = 1;
 }

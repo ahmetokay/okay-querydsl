@@ -8,7 +8,7 @@ import java.util.List;
 @Data
 public class QueryModel implements Serializable {
 
-    private List<GenericQueryModel> criteriaQueryModelList;
-
     private PageModel pageModel;
+
+    private List<GenericQueryModel> queryModelList;
 }

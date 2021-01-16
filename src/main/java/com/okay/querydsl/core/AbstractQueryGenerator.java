@@ -1,4 +1,4 @@
-package com.okay.querydsl.query;
+package com.okay.querydsl.core;
 
 import com.okay.querydsl.core.BaseEntity;
 import com.okay.querydsl.core.GenericQueryModel;
@@ -29,7 +29,7 @@ public abstract class AbstractQueryGenerator<QM extends QueryModel, E extends Ba
         BooleanBuilder queryBuilder = new BooleanBuilder();
         prepareQuery(queryBuilder, queryModel, entityPath);
         prepareQueryWithFilter(queryBuilder, queryModel);
-        prepareQueryWithGenericCriteria(queryBuilder, queryModel.getCriteriaQueryModelList());
+        prepareQueryWithGenericCriteria(queryBuilder, queryModel.getQueryModelList());
         return queryBuilder;
     }
 
