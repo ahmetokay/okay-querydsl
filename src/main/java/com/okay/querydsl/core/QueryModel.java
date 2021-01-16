@@ -11,5 +11,4 @@ public class QueryModel implements Serializable {
     private List<GenericQueryModel> criteriaQueryModelList;
 
     private PageModel pageModel;
-
 }

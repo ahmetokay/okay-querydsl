@@ -28,6 +28,7 @@ public abstract class AbstractQueryGenerator<QM extends QueryModel, E extends Ba
     public Predicate generateQuery(QM queryModel, EP entityPath) {
         BooleanBuilder queryBuilder = new BooleanBuilder();
         prepareQuery(queryBuilder, queryModel, entityPath);
+        prepareQueryWithFilter(queryBuilder, queryModel);
         prepareQueryWithGenericCriteria(queryBuilder, queryModel.getCriteriaQueryModelList());
         return queryBuilder;
     }

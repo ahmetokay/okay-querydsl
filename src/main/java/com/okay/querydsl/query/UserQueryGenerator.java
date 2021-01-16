@@ -1,12 +1,15 @@
 package com.okay.querydsl.query;
 
 import com.okay.querydsl.enm.EnumUserType;
+import com.okay.querydsl.entity.QUser;
+import com.okay.querydsl.entity.Role;
 import com.okay.querydsl.entity.User;
-import com.okay.querydsl.entity.query.QUser;
 import com.okay.querydsl.model.query.UserQueryModel;
 import com.querydsl.core.BooleanBuilder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
+
+import java.util.List;
 
 @Component
 public class UserQueryGenerator extends AbstractQueryGenerator<UserQueryModel, User, QUser> {
@@ -31,6 +34,11 @@ public class UserQueryGenerator extends AbstractQueryGenerator<UserQueryModel, U
         EnumUserType type = queryModel.getType();
         if (type != null) {
             queryBuilder.and(entityPath.type.eq(type));
+        }
+
+        List<Role> roleList = queryModel.getRoleList();
+        if (roleList != null) {
+            queryBuilder.and(entityPath.roleList.any().in(roleList));
         }
     }
 }

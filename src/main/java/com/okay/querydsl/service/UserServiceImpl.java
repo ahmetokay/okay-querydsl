@@ -1,8 +1,8 @@
 package com.okay.querydsl.service;
 
 import com.okay.querydsl.core.PageModel;
+import com.okay.querydsl.entity.QUser;
 import com.okay.querydsl.entity.User;
-import com.okay.querydsl.entity.query.QUser;
 import com.okay.querydsl.model.query.UserQueryModel;
 import com.okay.querydsl.query.UserQueryGenerator;
 import com.okay.querydsl.repository.UserRepository;
@@ -25,10 +25,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Page<User> filter(UserQueryModel userQueryModel) {
-        Predicate generateQuery = userQueryGenerator.generateQuery(userQueryModel, QUser.user);
+    public Page<User> filter(UserQueryModel queryModel) {
+        Predicate generateQuery = userQueryGenerator.generateQuery(queryModel, QUser.user);
 
-        PageModel pageModel = userQueryModel.getPageModel();
+        PageModel pageModel = queryModel.getPageModel();
         return userRepository.findAll(generateQuery, PageRequest.of(pageModel.getPage(), pageModel.getSize(), Sort.unsorted()));
     }
 }

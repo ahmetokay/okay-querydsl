@@ -6,5 +6,5 @@ import org.springframework.data.domain.Page;
 
 public interface UserService {
 
-    Page<User> filter(UserQueryModel userQueryModel);
+    Page<User> filter(UserQueryModel queryModel);
 }

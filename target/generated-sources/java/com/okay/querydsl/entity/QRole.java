@@ -1,8 +1,6 @@
-package com.okay.querydsl.entity.query;
+package com.okay.querydsl.entity;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
-import com.okay.querydsl.entity.Role;
-
 
 import com.querydsl.core.types.dsl.*;
 
@@ -21,7 +19,7 @@ public class QRole extends EntityPathBase<Role> {
 
     public static final QRole role = new QRole("role");
 
-    public final com.okay.querydsl.core.query.QBaseEntity _super = new com.okay.querydsl.core.query.QBaseEntity(this);
+    public final com.okay.querydsl.core.QBaseEntity _super = new com.okay.querydsl.core.QBaseEntity(this);
 
     public final StringPath description = createString("description");
 

@@ -13,13 +13,18 @@ import java.util.List;
 
 @SpringBootApplication
 public class QuerydslApplication {
+
     public static void main(String[] args) {
         SpringApplication.run(QuerydslApplication.class, args);
 
         UserQueryModel userQueryModel = new UserQueryModel();
         userQueryModel.setName("test");
         userQueryModel.setType(EnumUserType.USER);
-        PageModel pageModel = new PageModel(0, 5, "id", 1);
+        PageModel pageModel = new PageModel();
+        pageModel.setPage(0);
+        pageModel.setSize(5);
+        pageModel.setSortField("id");
+        pageModel.setSortOrder(1);
         userQueryModel.setPageModel(pageModel);
         GenericQueryModel genericQueryModel = new GenericQueryModel();
         genericQueryModel.setKey("username");

@@ -1,8 +1,6 @@
-package com.okay.querydsl.core.query;
+package com.okay.querydsl.core;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
-import com.okay.querydsl.core.BaseEntity;
-
 
 import com.querydsl.core.types.dsl.*;
 

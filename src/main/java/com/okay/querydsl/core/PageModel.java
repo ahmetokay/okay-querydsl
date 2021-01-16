@@ -19,14 +19,4 @@ public class PageModel implements Serializable {
 
     @NotNull
     private Integer sortOrder;
-
-    public PageModel() {
-    }
-
-    public PageModel(Integer page, Integer size, String sortField, Integer sortOrder) {
-        this.page = page;
-        this.size = size;
-        this.sortField = sortField;
-        this.sortOrder = sortOrder;
-    }
 }

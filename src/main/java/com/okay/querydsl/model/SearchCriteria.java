@@ -2,14 +2,14 @@ package com.okay.querydsl.model;
 
 import lombok.Data;
 
-@Data
-public class SearchCriteria {
+import java.io.Serializable;
 
-    private String type;
+@Data
+public class SearchCriteria implements Serializable {
 
     private String key;
 
     private String operation;
 
-    private Object value;
+    private String value;
 }
