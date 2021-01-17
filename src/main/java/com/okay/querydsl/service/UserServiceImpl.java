@@ -24,6 +24,7 @@ public class UserServiceImpl implements UserService {
         this.userQueryGenerator = userQueryGenerator;
     }
 
+
     @Override
     public Page<User> filter(UserQueryModel queryModel) {
         Predicate generateQuery = userQueryGenerator.generateQuery(queryModel, QUser.user);

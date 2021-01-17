@@ -2,6 +2,7 @@ package com.okay.querydsl.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.okay.querydsl.entity.User;
+import com.okay.querydsl.model.ReturnData;
 import com.okay.querydsl.model.Views;
 import com.okay.querydsl.model.query.UserQueryModel;
 import com.okay.querydsl.service.UserService;
@@ -36,10 +37,14 @@ public class TestController {
         return new ResponseEntity<>(page.getContent(), HttpStatus.OK);
     }
 
-    @JsonView(Views.Internal.class)
-    @RequestMapping(value = "/filter3", method = RequestMethod.POST)
-    public ResponseEntity<List<User>> filter3(@RequestBody UserQueryModel userQueryModel) {
+    @JsonView(Views.Public.class)
+    @RequestMapping(value = "/filterData", method = RequestMethod.POST)
+    public ResponseEntity<ReturnData<List<User>>> filter3(@RequestBody @JsonView({Views.Public.class}) UserQueryModel userQueryModel) {
         Page<User> page = userService.filter(userQueryModel);
-        return new ResponseEntity<>(page.getContent(), HttpStatus.OK);
+
+        ReturnData<List<User>> userReturnData = new ReturnData<>();
+        userReturnData.setPageModel(userQueryModel.getPageModel());
+        userReturnData.setData(page.getContent());
+        return new ResponseEntity<>(userReturnData, HttpStatus.OK);
     }
 }
