@@ -15,6 +15,9 @@ import java.util.List;
 @Component
 public class UserQueryGenerator extends AbstractQueryGenerator<UserQueryModel, User, QUser> {
 
+
+//    private final Converter burada olacak
+
     @Override
     protected void prepareQuery(BooleanBuilder queryBuilder, UserQueryModel queryModel, QUser entityPath) {
         String name = queryModel.getName();
